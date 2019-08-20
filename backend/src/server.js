@@ -6,9 +6,11 @@ const cors = require('cors');
 
 const server = express(); //Essa é a constante que irá armazenar as funcionalidades do express
 
-mongoose.connect('mongodb+srv://renan4g:renan4g@cluster0-qf7y6.mongodb.net/omnistack8?retryWrites=true&w=majority', {
+/*mongoose.connect('mongodb+srv://renan4g:renan4g@cluster0-qf7y6.mongodb.net/omnistack8?retryWrites=true&w=majority', {
     useNewUrlParser: true //Essa linha permite o uso do novo esquema do mongodb
-});//chamado de conexão ao banco de dados
+});//chamado de conexão ao banco de dados*/
+
+mongoose.connect('mongodb://localhost/devs', {useNewUrlParser: true}).then(() => {return console.log("connectado")}).catch(() => {return console.log("Não conectou")})
 
 server.use(cors());
 server.use(express.json())//Informa ao express que ele deve usar JSON

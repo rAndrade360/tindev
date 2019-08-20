@@ -5,9 +5,6 @@ const DeslikeController = require('./controllers/DeslikeController')
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
-    return res.json({message: `Olá amigo ${req.query.name}`} );
-});
 
 routes.get('/devs', DevController.index);
 routes.post('/devs', DevController.store);

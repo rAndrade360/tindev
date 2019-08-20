@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Link from 'react-router-dom';
+//import Link from 'react-router-dom';
 import api from '../services/api'
 import like from '../assets/like.svg';
 import dislike from '../assets/dislike.svg';
@@ -45,7 +45,7 @@ export default function Main({ match}){
         
 
         <div className="main-container">
-           <Link to='/'> <img src={logo} alt="Logo" /> </Link>
+            <img src={logo} alt="Logo" /> 
             {users.length > 0? (
                  <ul>
                  {users.map(user => (
